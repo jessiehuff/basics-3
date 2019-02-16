@@ -1,3 +1,9 @@
 <h1>
   {{title}}
 </h1>
+
+<button class="btn btn-primary" (click)="isDisplayed()">Display Details</button>
+
+<p *ngIf="displayed">Secret password = soggy Jess</p>
+
+<p *ngFor="let click of allClicks; let i = index" [ngStyle]="{'backgroundColor': (i+1 > 4) ? 'blue' : 'clear'}" [ngClass]="{whiteText: (i+1 >4)}">{{click}}</p>
